@@ -169,7 +169,7 @@ body {
   margin: 10px;
 }
 .lock {
-  background-image: url('img/lock.png') !important;
+  background-image: url(img/lock.PNG) !important;
   filter: drop-shadow(5px 5px 5px black);
 }
 .break {
