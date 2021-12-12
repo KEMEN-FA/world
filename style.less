@@ -23,6 +23,32 @@ body{
     transition: 0.5s;
 }
 
+#navImg{
+    position: absolute;
+    height: 100px;
+    left: 0;
+    top: 0;
+}
+
+.hide{
+    display: none !important;
+}
+
+#unlockBox{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 200px;
+        filter: drop-shadow(5px 5px 15px rgb(65, 255, 195));
+    }
+    pointer-events: none;
+}
+
 .nav-nocolor{
     background-color: transparent !important;
     a{
@@ -34,7 +60,7 @@ body{
     margin: 30px;
     #logo{
         width: 70px;
-    
+        transform: none;
     }
 }
 
@@ -170,7 +196,7 @@ body{
     right: 0;
     width: 70vw;
     height: 100vh;    
-
+    top: 80px;
     
     img{
         width: 100%;
@@ -213,7 +239,7 @@ body{
 }
 
 .lock{
-    background-image: url('./img/lock.png') !important;
+    background-image: url(./img/lock.PNG) !important;
     filter: drop-shadow(5px 5px 5px black);
 }
 
@@ -261,12 +287,12 @@ body{
 
 #footer{
     width: 100vw;
-    height: 30px;
+    height: 50px;
     position: fixed;
-    bottom: 0px;
+    bottom: -10px;
     background-color:@main;
     background-image: url(./img/rolling.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat:repeat-x;
     z-index: 10;
     animation: bgMove 10s infinite;
@@ -353,3 +379,4 @@ body{
 .cls-4:hover{
     fill: rgb(10, 10, 172) !important;
 }
+

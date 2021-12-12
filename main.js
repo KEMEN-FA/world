@@ -39,11 +39,12 @@ window.onload=()=>{
     }
 
     document.querySelector('#playBtn').addEventListener('click',()=>{
-        document.querySelector('#video').classList.toggle('video-hide')
+        document.querySelector('#video').classList.toggle('hide')
     })
 
     let hotValue = 0
     let hot = document.querySelector('#hot span')
+    const unlockBox = document.querySelector('#unlockBox')
 
     let unlock = 0
     const startMaker = new StarMaker()
@@ -64,6 +65,11 @@ window.onload=()=>{
                 ele.classList.toggle('lock')
                 unlock ++
                 // ele.style.backgroundColor = 'red'
+                unlockBox.classList.toggle('hide')
+                setTimeout(() => {
+                    unlockBox.classList.toggle('hide')
+                }, 1000);
+
             } 
 
             for(let i=0;i<10;i++){
@@ -85,7 +91,7 @@ window.onload=()=>{
                 // document.body.style.filter= `invert(1)`
 
                 setTimeout(() => {
-                    document.querySelector('#end').classList.toggle('section-hide')
+                    document.querySelector('#end').classList.remove('section-hide')
                 }, 5000);
             }
 
@@ -105,6 +111,7 @@ window.onload=()=>{
     const store = document.querySelector('#nav3')
     const support = document.querySelector('#nav2')
     const home = document.querySelector('#nav1')
+    const navImg = document.querySelector('#navImg')
 
     const nav = document.querySelector('#mainNav')
     const aboutPage = document.querySelector('#section4')
@@ -125,6 +132,10 @@ window.onload=()=>{
     support.addEventListener('click',()=>{
         aboutPage.classList.add('section-hide')
         nav.classList.remove('nav-nocolor')
+        navImg.classList.toggle('hide')
+        setTimeout(() => {
+            navImg.classList.add('hide')
+        }, 7000);
     })
 
 }
